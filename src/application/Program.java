@@ -7,6 +7,7 @@ import java.util.Locale;
 import java.util.Scanner;
 
 import entities.Reservation;
+import exceptions.DomainException;
 
 public class Program {
 
@@ -54,7 +55,7 @@ public class Program {
 		catch(ParseException e){
 			System.out.println("Invalid date format");
 		}
-		catch(IllegalArgumentException e) {
+		catch(DomainException e) {
 			System.out.println("Error in reservation: " + e.getMessage());
 		}
 		
