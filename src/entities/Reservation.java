@@ -44,7 +44,7 @@ public class Reservation {
 	public Reservation() {
 		
 	}
-	public Reservation(int number, Date checkIn, Date checkOut) throws DomainException {
+	public Reservation(int number, Date checkIn, Date checkOut) {
 		if (!checkOut.after(checkIn)) {
 			throw new DomainException("Check-out date must be after check-in date");
 		}		
@@ -74,7 +74,7 @@ public class Reservation {
 		return TimeUnit.DAYS.convert(diff, TimeUnit.MILLISECONDS); // converte tempo final - inicial hospedado  e converte para o formato
 	}
 	
-	public void updateDates(Date checkIn, Date checkOut) throws DomainException {
+	public void updateDates(Date checkIn, Date checkOut) {
 		// Delegamos a lógica de váliação para a Classe
 		Date now = new Date();
 		if(checkIn.before(now) || checkOut.before(now)) {
