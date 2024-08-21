@@ -46,8 +46,21 @@ public class Program {
 			
 			// Solução 2 = ruim
 			// Método retornando String
+			String error = reservation.updateDates(checkIn, checkOut);
+			if(error != null) {
+				System.out.println("Error in reservation: " + error);
+			} else {
+				System.out.println("Reservation: " + reservation);
+			}
 			
 			
+			
+			
+			
+			
+			
+			
+			/*
 			// Solução 1 = ruim
 			// Toda a lógica de programação dentro do programa principal
 			Date now = new Date();
@@ -59,7 +72,7 @@ public class Program {
 				reservation.updateDates(checkIn, checkOut);
 				System.out.println("Reservation: " + reservation);
 			}
-			
+			*/
 			
 		}
 		
